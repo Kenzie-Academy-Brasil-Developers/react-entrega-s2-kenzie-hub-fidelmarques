@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         --grey1Focus: #343B41;
         --grey1: #868E96;
         --grey0: #F8F9FA;
-        --sucess: #3FE864;
+        --success: #3FE864;
         --negative: #E83F5B;
     }
 
@@ -34,11 +34,16 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
     }
 
-    button {
+    button{
         all: unset;
         cursor: pointer;
         text-align: center;
     }
+
+    h6 {
+        all:unset
+    }
+    
 `;
 
 export default GlobalStyle;

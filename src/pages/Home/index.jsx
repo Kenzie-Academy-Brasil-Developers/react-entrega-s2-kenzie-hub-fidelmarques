@@ -5,7 +5,6 @@ import Logo from "../../components/Logo";
 
 function Home() {
   const history = useHistory();
-
   const handleNavigation = (path) => {
     return history.push(path);
   };

@@ -1,8 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+const appear = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+`;
 
 export const RegisterPage = styled.div`
   height: 100vh;
   padding: 0 5vw;
+  animation: ${appear} 1.5s;
   @media (min-width: 768px) {
     margin: 0 auto;
     max-width: 480px;
@@ -39,10 +49,6 @@ export const RegisterMain = styled.div`
   Button {
     margin-top: 1vh;
     min-width: 100%;
-  }
-
-  input {
-    border: none;
   }
 
   @media (min-width: 768px) {

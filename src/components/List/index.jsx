@@ -1,34 +1,12 @@
-function List() {
+function List({ arr }) {
   return (
     <ul>
-      <li>
-        <h4>React JS</h4>
-        <h5>Intermediário</h5>
-      </li>
-      <li>
-        <h4>React JS</h4>
-        <h5>Intermediário</h5>
-      </li>
-      <li>
-        <h4>React JS</h4>
-        <h5>Intermediário</h5>
-      </li>
-      <li>
-        <h4>React JS</h4>
-        <h5>Intermediário</h5>
-      </li>
-      <li>
-        <h4>React JS</h4>
-        <h5>Intermediário</h5>
-      </li>
-      <li>
-        <h4>React JS</h4>
-        <h5>Intermediário</h5>
-      </li>
-      <li>
-        <h4>React JS</h4>
-        <h5>Intermediário</h5>
-      </li>
+      {arr.map((item, index) => (
+        <li key={index}>
+          <h4>{item.title}</h4>
+          <h5>{item.status}</h5>
+        </li>
+      ))}
     </ul>
   );
 }

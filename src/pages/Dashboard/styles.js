@@ -1,8 +1,19 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const appear = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+`;
 
 export const DashboardPage = styled.div`
   height: 100vh;
   align-items: center;
+  animation: ${appear} 1.5s;
 `;
 
 export const Header = styled.div`
@@ -70,6 +81,9 @@ export const ContainerHeader = styled.div`
   Button {
     max-width: 40px;
     height: 40px;
+    &:hover {
+      background-color: var(--success);
+    }
   }
 `;
 

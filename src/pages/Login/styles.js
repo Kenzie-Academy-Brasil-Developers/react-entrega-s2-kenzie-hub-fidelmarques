@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const appear = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+`;
 
 export const LoginPage = styled.div`
   display: flex;
@@ -7,6 +17,7 @@ export const LoginPage = styled.div`
   align-items: center;
   height: 100vh;
   gap: 5vh;
+  animation: ${appear} 1.5s;
 
   h1 {
     color: var(--pink);
