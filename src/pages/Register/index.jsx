@@ -91,7 +91,9 @@ function Register() {
     <RegisterPage>
       <RegisterHeader>
         <Logo />
-        <Button color="grey3">Voltar</Button>
+        <Button color="grey3" onClick={() => handleNavigation("/login")}>
+          Voltar
+        </Button>
       </RegisterHeader>
       <RegisterMain>
         <RegisterMainInfo>
