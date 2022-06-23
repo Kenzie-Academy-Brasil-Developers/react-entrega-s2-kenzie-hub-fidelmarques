@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Badge, Grade } from "@mui/icons-material";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import api from "../../services/api";
+import { api } from "../../services/api";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 
@@ -28,8 +28,6 @@ function PopupAddItem({ children }) {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
-
-  console.log(userData.token);
 
   const onSubmitFunction = (data) => {
     api

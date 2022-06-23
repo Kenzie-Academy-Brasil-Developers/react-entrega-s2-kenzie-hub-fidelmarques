@@ -13,7 +13,7 @@ import plusButton from "../../img/plusButton.svg";
 import List from "../../components/List";
 import PopupAddItem from "../../components/PopupAddItem";
 import { useEffect, useState } from "react";
-import api from "../../services/api";
+import { api } from "../../services/api";
 import { toast } from "react-toastify";
 
 function Dashboard() {
@@ -59,7 +59,7 @@ function Dashboard() {
       {!userLoggedIn ? (
         <>
           <Redirect to="/" />
-          {toast.error("Usuário não logado!")}
+          {toast.error("Usuário não logado!", { toastId: "notAutenthicated" })}
         </>
       ) : (
         <DashboardPage>

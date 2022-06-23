@@ -1,4 +1,4 @@
-import { LoginInput, ErrorMessage } from "./styles";
+import { LoginInput, ErrorMessage, InputDiv } from "./styles";
 
 function InputBox({
   register,
@@ -17,10 +17,14 @@ function InputBox({
         {!!error && <ErrorMessage> {error.toUpperCase()}</ErrorMessage>}
       </label>
 
-      <div>
+      <InputDiv>
         {Icon && <Icon sx={{ color: "var(--pink)" }} />}
         {type === "input" ? (
-          <input {...register(name)} placeholder={placeholder} />
+          <input
+            {...register(name)}
+            placeholder={placeholder}
+            type={name === "passwordConfirm" ? `password` : name}
+          />
         ) : (
           <select {...register(name)}>
             {list.map((item, index) => (
@@ -30,7 +34,7 @@ function InputBox({
             ))}
           </select>
         )}
-      </div>
+      </InputDiv>
     </LoginInput>
   );
 }

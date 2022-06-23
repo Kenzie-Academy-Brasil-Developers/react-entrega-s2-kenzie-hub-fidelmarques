@@ -4,7 +4,7 @@ import InputBox from "../../components/InputBox";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import api from "../../services/api";
+import { api } from "../../services/api";
 
 import { useForm } from "react-hook-form";
 import * as yup from "yup";

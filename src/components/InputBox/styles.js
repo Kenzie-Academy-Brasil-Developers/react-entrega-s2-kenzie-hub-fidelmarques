@@ -17,34 +17,32 @@ export const LoginInput = styled.div`
     color: red;
   }
 
-  div {
-    display: flex;
-    height: 6vh;
-    border-radius: 4px;
-    color: var(--grey0);
-    background-color: var(--grey2);
-    align-items: center;
-    text-align: center;
-    padding: 0 10px;
-    gap: 10px;
-    border: 1px solid var(--grey2);
-
-    &:focus {
-      border: 1px solid var(--grey0);
-    }
-    flex-direction: row;
-    justify-content: center;
-  }
-
   input,
   select {
-    height: 6vh;
+    height: 5vh;
     width: calc(100%);
     border-radius: 4px;
     border: 1px solid var(--grey2);
     background-color: var(--grey2);
     text-align: left;
     color: var(--grey0);
+  }
+`;
+
+export const InputDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 6vh;
+  border-radius: 4px;
+  color: var(--grey0);
+  background-color: var(--grey2);
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  border: 1px solid var(--grey1);
+  padding-left: 10px;
+
+  input {
   }
 `;
 

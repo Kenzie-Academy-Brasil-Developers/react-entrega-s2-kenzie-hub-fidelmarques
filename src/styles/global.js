@@ -12,6 +12,13 @@ const GlobalStyle = createGlobalStyle`
     display: none;
     }
 
+    input:-webkit-autofill { 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #F8F9FA;
+    background-clip: text;
+    }
+
+
     :root {
         --pink: #FF577F;
         --pinkFocus: #FF427F;
@@ -24,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
         --grey0: #F8F9FA;
         --success: #3FE864;
         --negative: #E83F5B;
+        --toastify-color-light: var(--grey3);
+        --toastify-color-dark: var(--grey3);
+        --toastify-text-color-light: var(--grey0);
+        --toastify-text-color-dark: var(--grey0);
     }
 
 

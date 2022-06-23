@@ -2,15 +2,20 @@ import Button from "../../components/Button";
 import Logo from "../../components/Logo";
 import InputBox from "../../components/InputBox";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { Container, LoginPage } from "./styles";
 import { Login as LoginIcon, MailOutline, Key } from "@mui/icons-material";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import api from "../../services/api";
+import { api } from "../../services/api";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
 function Login() {
+  const [userLoggedIn, setUserLoggedIn] = useState(
+    localStorage.getItem("userdata") !== null
+  );
+
   const schema = yup.object().shape({
     email: yup
       .string()
@@ -43,40 +48,48 @@ function Login() {
   };
 
   return (
-    <LoginPage>
-      <Logo />
-      <Container>
-        <h2>Login</h2>
-        <LoginIcon />
-        <InputBox
-          register={register}
-          name="email"
-          error={errors.email?.message}
-          icon={MailOutline}
-          label="Email"
-          placeholder="Insira aqui seu email"
-        />
-        <InputBox
-          register={register}
-          name="password"
-          error={errors.password?.message}
-          icon={Key}
-          label="Senha"
-          placeholder="Insira aqui sua senha"
-        />
-        <Button
-          color="pink"
-          type="submit"
-          onClick={handleSubmit(onSubmitFunction)}
-        >
-          Entrar
-        </Button>
-        <span>Ainda não possui uma conta?</span>
-        <Button color="grey1" onClick={() => handleNavigation("/register")}>
-          Cadastre-se
-        </Button>
-      </Container>
-    </LoginPage>
+    <>
+      {userLoggedIn ? (
+        <>
+          <Redirect to="/dashboard" />
+        </>
+      ) : (
+        <LoginPage>
+          <Logo />
+          <Container>
+            <h2>Login</h2>
+            <LoginIcon />
+            <InputBox
+              register={register}
+              name="email"
+              error={errors.email?.message}
+              icon={MailOutline}
+              label="Email"
+              placeholder="Insira aqui seu email"
+            />
+            <InputBox
+              register={register}
+              name="password"
+              error={errors.password?.message}
+              icon={Key}
+              label="Senha"
+              placeholder="Insira aqui sua senha"
+            />
+            <Button
+              color="pink"
+              type="submit"
+              onClick={handleSubmit(onSubmitFunction)}
+            >
+              Entrar
+            </Button>
+            <span>Ainda não possui uma conta?</span>
+            <Button color="grey1" onClick={() => handleNavigation("/register")}>
+              Cadastre-se
+            </Button>
+          </Container>
+        </LoginPage>
+      )}
+    </>
   );
 }
 export default Login;
