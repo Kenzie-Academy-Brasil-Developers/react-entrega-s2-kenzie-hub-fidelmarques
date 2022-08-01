@@ -1,6 +1,6 @@
 # Kenzie Hub
 
-Projeto desenvolvido durante o M3 do curso de Desenvolvimento Full Stack da Kenzie Academy Brasil. O objetivo desse projeto é desenvolver as features de login e cadastro utilizando React Hook Form, Yup e requisições de POST simples.
+Projeto desenvolvido durante o M3 do curso de Desenvolvimento Full Stack da Kenzie Academy Brasil. O objetivo desse projeto é criar um e-commerce funcional com carrinho de compras, fazendo o gerenciamento da aplicação com Redux.
 
 💻 [Tecnologias](#tecnologias)
  
@@ -11,10 +11,7 @@ Projeto desenvolvido durante o M3 do curso de Desenvolvimento Full Stack da Kenz
 ![image](https://user-images.githubusercontent.com/98785969/182207865-46beef7d-56d6-43b2-b9d4-a4d47548803e.png)
 
 ## Tecnologias:
-* HTML5
-* CSS3
 * React
-
 * Axios
 * React Hook Form
 * React Router DOM
