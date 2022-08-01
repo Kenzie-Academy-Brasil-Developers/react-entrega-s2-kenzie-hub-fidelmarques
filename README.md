@@ -1,6 +1,6 @@
 # Kenzie Hub
 
-Projeto desenvolvido durante o M3 do curso de Desenvolvimento Full Stack da Kenzie Academy Brasil. O objetivo desse projeto é criar um e-commerce funcional com carrinho de compras, fazendo o gerenciamento da aplicação com Redux.
+Projeto desenvolvido durante o M3 do curso de Desenvolvimento Full Stack da Kenzie Academy Brasil. O objetivo desse projeto é desenvolver as features de login e cadastro utilizando React Hook Form, Yup e requisições de POST simples.
 
 💻 [Tecnologias](#tecnologias)
  
