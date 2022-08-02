@@ -2,11 +2,11 @@
 
 Projeto desenvolvido durante o M3 do curso de Desenvolvimento Full Stack da Kenzie Academy Brasil. O objetivo desse projeto é desenvolver as features de login e cadastro utilizando React Hook Form, Yup e requisições de POST simples.
 
-💻 [Tecnologias](#tecnologias)
+### [💻 Tecnologias](#tecnologias)
  
-📸 [Screenshots](#screenshots)
+### [📸 Screenshots](#screenshots)
 
-🏁 [Clique aqui para testar!](https://react-entrega-s2-kenzie-hub-fidelmarques-fidelmarques.vercel.app/)
+### [🏁 Clique aqui para testar!](https://react-entrega-s2-kenzie-hub-fidelmarques-fidelmarques.vercel.app/)
 
 ![image](https://user-images.githubusercontent.com/98785969/182207865-46beef7d-56d6-43b2-b9d4-a4d47548803e.png)
 
